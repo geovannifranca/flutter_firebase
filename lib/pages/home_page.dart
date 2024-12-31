@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/widgets/contacts_list_widget.dart';
+import 'package:myapp/widgets/filter_bar_widget.dart';
 import 'package:myapp/widgets/home_app_bar_widget.dart';
 
 class HomePage extends StatelessWidget {
@@ -27,6 +28,22 @@ class HomePage extends StatelessWidget {
                 child: Padding(
                   padding: EdgeInsets.only(left: 16, top: 8, bottom: 16),
                   child: ContactsListWidget(),
+                ),
+              ),
+              Expanded(
+                flex: 3,
+                child: Container(
+                  decoration: BoxDecoration(
+                    color: Colors.grey.shade100,
+                    borderRadius: const BorderRadius.only(
+                      topLeft: Radius.circular(20),
+                      topRight: Radius.circular(20),
+                    ),
+                  ),
+                  child: const Padding(
+                    padding: EdgeInsets.only(left: 16, top: 20, bottom: 16),
+                    child: FilterBarWidget(),
+                  ),
                 ),
               ),
             ],
