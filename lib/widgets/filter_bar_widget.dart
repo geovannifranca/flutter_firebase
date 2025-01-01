@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:myapp/widgets/filter_card_widget.dart';
+import 'package:myapp/widgets/search_field_widgt.dart';
 
 class FilterBarWidget extends StatelessWidget {
   const FilterBarWidget({
@@ -8,29 +9,26 @@ class FilterBarWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        IconButton(
-          icon: const Icon(Icons.search),
-          onPressed: () {
-            debugPrint('clicou!');
-          },
-        ),
-        const FilterCardWidget(
-          label: 'Direct messege',
-          notification: 23,
-          isSelected: true,
-        ),
-        const SizedBox(
-          width: 8,
-        ),
-        const FilterCardWidget(
-          label: 'Group',
-          notification: 5,
-          isSelected: false,
-        ),
-      ],
+    return SearchFieldWidgt(
+      onSearch: (String searchedText) {},
+      child: const Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          FilterCardWidget(
+            label: 'Direct messege',
+            notification: 23,
+            isSelected: true,
+          ),
+          SizedBox(
+            width: 8,
+          ),
+          FilterCardWidget(
+            label: 'Group',
+            notification: 5,
+            isSelected: false,
+          ),
+        ],
+      ),
     );
   }
 }
