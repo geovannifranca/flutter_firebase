@@ -31,7 +31,7 @@ class ContactsListWidget extends StatelessWidget {
           child: ListView.separated(
             scrollDirection: Axis.horizontal,
             itemCount: 10,
-            separatorBuilder: (_, __) => const SizedBox(width: 17),
+            separatorBuilder: (_, __) => const SizedBox(width: 16),
             itemBuilder: (_, index) {
               return StatusCardWedget(
                   isOnline: index.isEven,

@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
 
 class UserImageWidget extends StatelessWidget {
-  const UserImageWidget(
-      {super.key,
-      required this.radius,
-      required this.url,
-      required this.isOnline});
+  const UserImageWidget({
+    super.key,
+    required this.radius,
+    required this.url,
+    required this.isOnline,
+  });
 
   final double radius;
   final String url;
@@ -16,12 +17,9 @@ class UserImageWidget extends StatelessWidget {
     return Stack(
       clipBehavior: Clip.none,
       children: [
-        Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: CircleAvatar(
-            radius: radius,
-            foregroundImage: NetworkImage(url),
-          ),
+        CircleAvatar(
+          radius: radius,
+          foregroundImage: NetworkImage(url),
         ),
         Positioned(
           bottom: -2,

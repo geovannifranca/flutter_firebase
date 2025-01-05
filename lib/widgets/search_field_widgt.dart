@@ -20,13 +20,14 @@ class _SearchFieldWidgtState extends State<SearchFieldWidgt> {
   bool showTextField = false;
 
   void toggleShow() {
+    setState(() {
+      showTextField = !showTextField;
+    });
+
     if (showTextField && controller.text.isNotEmpty) {
       return widget.onSearch(controller.text);
     }
 
-    setState(() {
-      showTextField = !showTextField;
-    });
     if (showTextField) {
       focusNode.requestFocus();
     }
