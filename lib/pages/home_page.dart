@@ -42,12 +42,17 @@ class HomePage extends StatelessWidget {
                       topRight: Radius.circular(20),
                     ),
                   ),
-                  child: const Column(
+                  child: Column(
                     children: [
-                      FilterBarWidget(),
-                      SizedBox(height: 8.0),
+                      const FilterBarWidget(),
+                      const SizedBox(height: 8.0),
                       Expanded(
-                        child: ChatSectionWidget(),
+                        child: ListView(
+                          children: const [
+                            ChatSectionWidget(label: 'Pinned Messege(2)'),
+                            ChatSectionWidget(label: 'All Message(7)'),
+                          ],
+                        ),
                       ),
                     ],
                   ),
