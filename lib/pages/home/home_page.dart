@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/widgets/chat_section_widget.dart';
-import 'package:myapp/widgets/contacts_list_widget.dart';
-import 'package:myapp/widgets/filter_bar_widget.dart';
-import 'package:myapp/widgets/home_app_bar_widget.dart';
+import 'package:myapp/pages/home/widgets/chat_section_widget.dart';
+import 'package:myapp/pages/home/widgets/contacts_list_widget.dart';
+import 'package:myapp/pages/home/widgets/filter_bar_widget.dart';
+import 'package:myapp/pages/home/widgets/home_app_bar_widget.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -14,6 +14,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
         backgroundColor: Colors.deepPurple.shade300,
         body: SafeArea(
+          bottom: false,
           child: Column(
             children: [
               Padding(
@@ -26,13 +27,14 @@ class HomePage extends StatelessWidget {
                 ),
               ),
               const Flexible(
+                flex: 3,
                 child: Padding(
                   padding: EdgeInsets.only(left: 16, top: 8, bottom: 16),
                   child: ContactsListWidget(),
                 ),
               ),
               Expanded(
-                flex: 3,
+                flex: 8,
                 child: Container(
                   padding: const EdgeInsets.only(left: 16, right: 16, top: 20),
                   decoration: BoxDecoration(
@@ -50,6 +52,7 @@ class HomePage extends StatelessWidget {
                         child: ListView(
                           children: const [
                             ChatSectionWidget(label: 'Pinned Messege(2)'),
+                            SizedBox(height: 8.0),
                             ChatSectionWidget(label: 'All Message(7)'),
                           ],
                         ),

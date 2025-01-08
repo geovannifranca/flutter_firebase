@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:myapp/widgets/chat_card_widget.dart';
+import 'package:myapp/pages/home/widgets/chat_card_widget.dart';
 
 class ChatSectionWidget extends StatelessWidget {
   const ChatSectionWidget({

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/widgets/status_card_wedget.dart';
+import 'package:myapp/pages/home/widgets/status_card_wedget.dart';
 
 class ContactsListWidget extends StatelessWidget {
   const ContactsListWidget({super.key});

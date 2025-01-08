@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/pages/home_page.dart';
+import 'package:myapp/pages/chat/chat_page.dart';
 
 class AppWidget extends StatelessWidget {
   const AppWidget({super.key});
@@ -7,8 +7,8 @@ class AppWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const MaterialApp(
-      home: HomePage(),
       debugShowCheckedModeBanner: false,
+      home: ChatPage(),
     );
   }
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:myapp/widgets/filter_card_widget.dart';
-import 'package:myapp/widgets/search_field_widgt.dart';
+import 'package:myapp/pages/home/widgets/filter_card_widget.dart';
+import 'package:myapp/pages/home/widgets/search_field_widgt.dart';
 
 class FilterBarWidget extends StatelessWidget {
   const FilterBarWidget({
